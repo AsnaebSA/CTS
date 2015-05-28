@@ -36,11 +36,21 @@ public class Bilet {
 	private int loc;
 	private int nr_bilete;
 	private int cantitate;
+	public double pretdiscount;
 
 	public int costbilet(int pret, int cantitate) {
 		int cost= pret*cantitate;
 		return cost;
-	};
-}
+	}
+	public double pretdiscount(int pret, int cantitate, double discount){
+		double pretdiscount = 0;
+		if(cantitate>10){
+			discount = 0.15;
+			pretdiscount  = pret*cantitate*discount ;
+		}
+		return pretdiscount;
+	}
+		
+	}
 
 
